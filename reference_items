@@ -1,0 +1,17 @@
+<!-- Icons -->
+people- https://static1.squarespace.com/static/65660ef22544614ca593676c/t/6696c494bad0be11b8b0a6e7/1721156756851/icon-people.png
+ruler- https://static1.squarespace.com/static/65660ef22544614ca593676c/t/6696c494fc62ca0a73fa53fb/1721156756905/icon-ruler.png
+stage- https://static1.squarespace.com/static/65660ef22544614ca593676c/t/6697ecf99d9f230bcceefcae/1721232633771/icon-stage.png
+windows- https://static1.squarespace.com/static/65660ef22544614ca593676c/t/6696c4941eacf8454160c4b3/1721156756905/icon-windows.png
+mirror- https://static1.squarespace.com/static/65660ef22544614ca593676c/t/6697e7d85efc44329525adca/1721231320754/icon-wall-mirror.png
+presentation- https://static1.squarespace.com/static/65660ef22544614ca593676c/t/6697ecdadeded22f5e89bcfc/1721232602751/icon-presentation.png
+volume- https://static1.squarespace.com/static/65660ef22544614ca593676c/t/6697efc32f7c257f79771a56/1721233347246/icon-low-volume.png
+dance- https://static1.squarespace.com/static/65660ef22544614ca593676c/t/6697f3e7af01771ec9f3f0b6/1721234407864/icon-dance.png
+
+
+<!-- Colors -->
+--color-green: #4a666b;
+--color-black: #180222;
+--color-light-blue: #c3e7ef;
+--color-yellow: #e6edaa;
+--color-blue: #405aa8;
