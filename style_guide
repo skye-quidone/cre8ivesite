@@ -1,12 +1,12 @@
 :root {
-	--color-green: #4a666b;
-	--color-black: #180222;
-	--color-light-blue: #c3e7ef;
-	--color-yellow: #e6edaa;
-	--color-blue: #405aa8;
+  --color-green: #4a666b;
+  --color-black: #180222;
+  --color-light-blue: #c3e7ef;
+  --color-yellow: #e6edaa;
+  --color-blue: #405aa8;
 }
 
-/*editing squarespace defaults*/
+/* editing squarespace defaults */
 
 .header-nav-list .header-nav-item:not(:first-child) {
   border-left: 1px solid var(--color-blue);
@@ -14,32 +14,35 @@
   padding-left: 1vw !important;
 }
 
-/*pages*/
+/* pages */
 
-/*classes*/
+/* classes */
 
-.boxSpaces {
+.space_desc_box {
+  /* box with dashed edges- used in Spaces page */
   border: 1px dashed;
   padding: 15px;
   padding-left: 20px;
   height: 400px;
+  font-size: 80%;
 
-  h4 {
-    margin-bottom: 0.5em;
-    margin-top: 0.2em;
+  h3 {
+    margin: 0.5em auto 0.2em auto;
   }
 
-  p {
-    font-size: 18px;
-    line-height: 1.6em;
-    margin-top: 0.2em;
-    margin-bottom: 0.3em;
+  p2 {
+    font-size: 120%;
   }
 
-	ul { }
+  ul {
+    margin: 0.4em auto 0.4em -0.5em;
+    line-height: -1em;
+    font-size: 120%;
+  }
 }
 
 .studio_card {
+  /* Space name/type cards to link to indvidual space pages for Book Now page */
   width: 100%;
   height: 450px;
   background: linear-gradient(to bottom, var(--color-blue) 40%, var(--color-blue) 54%, var(--color-light-blue) 50%, var(--color-light-blue) 100%);
@@ -99,12 +102,16 @@
     padding-top: 1%;
     white-space: nowrap;
     overflow: hidden;
-		line-height: 1.5em;
+    line-height: 1.5em;
   }
 
-  table td { padding: 2px; }
+  table td {
+    padding: 2px;
+  }
 
-  .tablewide { padding-left: 20%; }
+  .tablewide {
+    padding-left: 20%;
+  }
 
   .middle {
     width: 99%;
@@ -123,7 +130,7 @@
 
   .middle .icon_item {
     max-height: 80%;
-    display: inline-block;				
+    display: inline-block;
     text-align: center;
     flex: 1;
   }
@@ -131,6 +138,6 @@
   .middle .icon_item span {
     display: block;
     padding-top: 5%;
-		line-height: 1.5em;
+    line-height: 1.5em;
   }
 }
