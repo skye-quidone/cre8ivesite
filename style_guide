@@ -14,10 +14,24 @@
   padding-left: 1vw !important;
 }
 
-@media screen {
+@media only screen {
+
   html,
   body {
     overflow-x: hidden;
+  }
+}
+
+/* only home page */
+@media only screen {
+  #collection-65660efb2544614ca59368bb h1 {
+    font-size: 2rem;
+  }
+
+  #collection-65660efb2544614ca59368bb h2 {
+    font-size: 1.5rem;
+    padding-left: 1%;
+    padding-right: 1%;
   }
 }
 
