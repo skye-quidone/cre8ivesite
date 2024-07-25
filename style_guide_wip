@@ -19,28 +19,64 @@
   padding-bottom: 0;
 }
 
-@media only screen {
-
-  html,
-  body {
-    overflow-x: hidden;
-  }
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
+/* pages */
+
 /* only home page */
-@media {   /* lines between lines in second section */
-  #collection-65660efb2544614ca59368bb h3:not(:first-child) {
+#block-yui_3_17_2_1_1720015239357_19291 {
+
+  /* lines between lines in second section */
+  h3:not(:first-child) {
     border-top: 1px solid var(--color-blue);
     padding-top: 10px;
     margin-top: -17px;
   }
-  
-  #collection-65660efb2544614ca59368bb h3 {
+}
+
+@media screen and (min-width: 900px) {
+
+  /* fixing spacing on mobile from lines */
+  #block-yui_3_17_2_1_1720015239357_19291 h3 {
     line-height: 60px;
   }
 }
 
-/* pages */
+#block-1405601de2c388e6edb4,
+#block-2864dd2fe34583cbd66a,
+#block-64683fea73334d071d65 {
+  /* justifying and padding text */
+  padding-left: 5%;
+  padding-right: 5%;
+  max-width: 90%;
+  text-align: justify;
+}
+
+/* w javascript */
+
+a.text-click {
+  /* if code box with "clickable" and hyperlink makes whole box clickable */
+	/* <a href="url" class="text-click"></a> */
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 30px;
+}
+
+@media screen and (min-width: 900px) {
+  a.text-click:hover {
+    background: var(--color-light-blue);
+    opacity: 0.1;
+  }
+}
 
 /* classes */
 
