@@ -15,3 +15,8 @@ dance- https://static1.squarespace.com/static/65660ef22544614ca593676c/t/6697f3e
 --color-light-blue: #c3e7ef;
 --color-yellow: #e6edaa;
 --color-blue: #405aa8;
+
+
+<!-- Putting in Stylesheet -->
+in code injection footer: <link rel="stylesheet" href="/s/style_guide_linked.css"/>
+file linked on unlisted page in a text box
