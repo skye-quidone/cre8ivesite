@@ -13,7 +13,7 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .header-nav-list .header-nav-item:not(:first-child) {
@@ -63,7 +63,8 @@ body {
 #block-90322793d0b24229d39a,
 #block-f120455e0cf5d7653b58,
 #block-3f66047e7d7d98e97b45 {
-	/* modifying title size in booking process boxes */
+
+  /* modifying title size in booking process boxes */
   .sqsrte-text-color--accent {
     @media screen and (max-width: 900px) {
       font-size: 1.3em;
@@ -81,10 +82,17 @@ svg * {
   pointer-events: visable;
 }
 
-@media screen and (min-width: 900px) rect:hover {
+rect:hover {
   fill-opacity: 0.3;
   fill: var(--color-light-blue);
   filter: blur(10px);
+}
+
+#block-yui_3_17_2_1_1722358166125_34988 {
+  @media screen and (max-width: 900px) {
+    display: none;
+
+  }
 }
 
 
