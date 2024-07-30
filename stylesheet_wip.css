@@ -8,6 +8,14 @@
 
 /* --------------------- editing squarespace defaults --------------------- */
 
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
 .header-nav-list .header-nav-item:not(:first-child) {
   border-left: 1px solid var(--color-blue);
   margin-left: 1vw !important;
@@ -17,12 +25,6 @@
 .gallery-fullscreen-slideshow[data-width="full"] {
   padding-top: 5px;
   padding-bottom: 5px;
-}
-
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 /* --------------------- pages --------------------- */
