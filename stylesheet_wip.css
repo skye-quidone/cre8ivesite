@@ -81,7 +81,7 @@ svg * {
   pointer-events: visable;
 }
 
-rect:hover {
+@media screen and (min-width: 900px) rect:hover {
   fill-opacity: 0.3;
   fill: var(--color-light-blue);
   filter: blur(10px);
