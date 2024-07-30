@@ -6,7 +6,7 @@
   --color-blue: #405aa8;
 }
 
-/* editing squarespace defaults */
+/* --------------------- editing squarespace defaults --------------------- */
 
 .header-nav-list .header-nav-item:not(:first-child) {
   border-left: 1px solid var(--color-blue);
@@ -16,7 +16,7 @@
 
 .gallery-fullscreen-slideshow[data-width="full"] {
   padding-top: 5px;
-  padding-bottom: 0;
+  padding-bottom: 5px;
 }
 
 html,
@@ -25,9 +25,9 @@ body {
   overflow-x: hidden;
 }
 
-/* pages */
+/* --------------------- pages --------------------- */
 
-/* only home page */
+/* --------------------- only home page --------------------- */
 #block-yui_3_17_2_1_1720015239357_19291 {
 
   /* lines between lines in second section */
@@ -46,21 +46,38 @@ body {
   }
 }
 
-#block-1405601de2c388e6edb4,
-#block-2864dd2fe34583cbd66a,
-#block-64683fea73334d071d65 {
-  /* justifying and padding text */
+#block-f9993bdf5703f951614f,
+#block-58433e1404ca0f91b26a,
+#block-a57592029078f77dbbd1,
+#block-7019dc591979b8ab9e14 {
+  /* justifying and padding text in booking process*/
   padding-left: 5%;
   padding-right: 5%;
   max-width: 90%;
   text-align: justify;
 }
 
-/* w javascript */
+#block-99c7d16e95030a1a0d53,
+#block-90322793d0b24229d39a,
+#block-f120455e0cf5d7653b58,
+#block-3f66047e7d7d98e97b45 {
+	/* modifying title size in booking process boxes */
+  .sqsrte-text-color--accent {
+    @media screen and (max-width: 900px) {
+      font-size: 1.3em;
+    }
+
+    @media screen and (min-width: 900px) {
+      font-size: 95%;
+    }
+  }
+}
+
+/* --------------------- w javascript --------------------- */
 
 a.text-click {
   /* if code box with "clickable" and hyperlink makes whole box clickable */
-	/* <a href="url" class="text-click"></a> */
+  /* <a href="url" class="text-click"></a> */
   position: absolute;
   display: block;
   top: 0;
@@ -78,7 +95,7 @@ a.text-click {
   }
 }
 
-/* classes */
+/* --------------------- classes --------------------- */
 
 .space_desc_box {
   /* box with dashed edges- used in Spaces page */
