@@ -1,9 +1,11 @@
 :root {
   --color-green: #4a666b;
+  --color-green-hover: #b6c1c3;
   --color-black: #180222;
   --color-light-blue: #c3e7ef;
   --color-yellow: #e6edaa;
   --color-blue: #405aa8;
+  --color-blue-hover: #6177A8;
 }
 
 /* --------------------- editing squarespace defaults --------------------- */
@@ -81,13 +83,6 @@ html {
 
 /* --------------------- spaces --------------------- */
 
-#block-yui_3_17_2_1_1722358166125_34988 {
-  @media screen and (max-width: 900px) {
-    display: none;
-
-  }
-}
-
 
 /* --------------------- w javascript --------------------- */
 
@@ -147,6 +142,10 @@ a.text-click {
     border: none;
     white-space: nowrap;
     overflow: hidden;
+  }
+
+  button:hover {
+    background-color: var(--color-blue-hover);
   }
 }
 
@@ -267,10 +266,6 @@ a.text-click {
   }
 }
 
-html {
-  scroll-behavior: smooth
-}
-
 #back-to-top {
   /* scroll back to the map on spaces page */
   height: 50px;
@@ -291,8 +286,66 @@ html {
 }
 
 #back-to-top.show-btt {
-  /*Position In View*/
   bottom: 0;
   opacity: 1;
   transition: all .5s ease;
+}
+
+
+.slideshow-container {
+  /* slideshow in code box */
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+
+  img {
+    vertical-align: middle;
+  }
+
+  .mySlides {
+    display: none;
+  }
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: var(--color-green-hover);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+
+.active {
+  background-color: var(--color-green);
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: var(--color-light-blue);
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 }
