@@ -12,7 +12,7 @@
 var text = ["STUDIOS.", "LOFTS.", "OFFICES."];
 var counter = 0;
 var elem = document.getElementById("changeText");
-setInterval(change, 7000);
+setInterval(change, 3000);
 
 function change() {
   elem.classList.add('hide');
