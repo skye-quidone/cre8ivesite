@@ -106,91 +106,6 @@ a.text-click {
   }
 }
 
-/* --------------------- classes --------------------- */
-
-.space_desc_box {
-  /* box with dashed edges- used in Spaces page */
-  border: 1px dashed;
-  padding: 1% 3% 2% 3%;
-  height: 400px;
-  font-size: 80%;
-  background: white;
-
-  h3 {
-    margin: 0.5em auto 0.2em auto;
-    color: var(--color-blue);
-		text-align: center;
-  }
-
-  p2 {
-    font-size: 110%;
-  }
-
-  ul {
-    margin: 0.4em auto 0.4em -0.5em;
-    line-height: -1em;
-    font-size: 110%;
-  }
-
-  button {
-    font-size: 120%;
-    margin: 4% 25% 2% 25%;
-    color: white;
-    background-color: var(--color-blue);
-    padding: 2% 8% 2% 8%;
-    position: absolute;
-    top: 80%;
-    border: none;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-  button:hover {
-    background-color: var(--color-blue-hover);
-  }
-	
-	.icon_row {
-		width: 100%;
-		margin-top: 3%;
-		margin-bottom: 5%;
-		display: flex;
-  }
-
-  .icon_row img {
-    height: 45px;
-  }
-
-  .icon_item {
-    max-height: 80%;
-    text-align: center;
-    flex: 1;
-  }
-
-  .icon_item span {
-    display: block;
-    padding-top: 5%;
-    line-height: 1.5em;
-		font-size:110%;
-  }
-}
-
-.map-wrapper {
-  /* Space map on spaces page w/ click to jump down */
-  width: 100%;
-  position: relative;
-
-  .map-area {
-    position: absolute;
-    fill-opacity: 0;
-  }
-
-  rect:hover {
-    fill-opacity: 0.3;
-    fill: var(--color-light-blue);
-    filter: blur(10px);
-  }
-}
-
 #back-to-top {
   /* scroll back to the map on spaces page */
   height: 50px;
@@ -222,6 +137,10 @@ a.text-click {
   max-width: 100%;
   position: relative;
   margin: auto;
+  max-height: 425px;
+  @media screen and (max-width: 900px) {
+      max-height: 100px;
+    }
 
   img {
     vertical-align: middle;
@@ -254,9 +173,8 @@ a.text-click {
 .prev:hover,
 .next:hover {
   background-color: var(--color-light-blue);
-
   @media screen and (max-width: 900px) {
-    display: none;
+    background-color: rgba(0,0,0,0);
   }
 }
 
@@ -271,4 +189,127 @@ a.text-click {
 
 .hide {
   opacity: 0 !important;
+}
+
+
+/* --------------------- classes --------------------- */
+
+.space_desc_box {
+  /* box with dashed edges- used in Spaces page */
+  border: 1px dashed;
+  padding: 1% 3% 2% 3%;
+  height: 400px;
+  font-size: 80%;
+  background: white;
+
+  h3 {
+    margin: 0.5em auto 0.2em auto;
+    color: var(--color-blue);
+    text-align: center;
+  }
+
+  p2 {
+    font-size: 110%;
+  }
+
+  ul {
+    margin: 0.4em auto 0.4em -0.5em;
+    line-height: -1em;
+    font-size: 110%;
+  }
+
+  button {
+    font-size: 120%;
+    margin: 4% 25% 2% 28%;
+    color: white;
+    background-color: var(--color-blue);
+    padding: 2% 8% 2% 8%;
+    position: absolute;
+    top: 75%;
+    border: none;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    @media screen and (max-width: 900px) {
+      margin-left: 15%;
+      top: 78%;
+    }
+  }
+
+  button:hover {
+    background-color: var(--color-blue-hover);
+  }
+
+  .icon_row {
+    width: 100%;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    display: flex;
+  }
+
+  .icon_row img {
+    height: 45px;
+  }
+
+  .icon_item {
+    max-height: 80%;
+    text-align: center;
+    flex: 1;
+  }
+
+  .icon_item span {
+    display: block;
+    padding-top: 5%;
+    line-height: 1.5em;
+    font-size: 110%;
+  }
+}
+
+.map-wrapper {
+  /* Space map on spaces page w/ click to jump down */
+  width: 100%;
+  position: relative;
+
+  .map-area {
+    position: absolute;
+    fill-opacity: 0;
+  }
+
+  rect:hover {
+    fill-opacity: 0.3;
+    fill: var(--color-light-blue);
+    filter: blur(10px);
+  }
+}
+
+.space_header_row {
+  /* Indvidual spaces page icons under title */
+  display: flex;
+
+  img {
+    height: 45px;
+  }
+
+  .pricing {
+    flex: 1;
+
+    .item {
+      img {
+        height: 20px !important;
+        float: left;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .icon {
+    text-align: center;
+    flex: 1;
+    margin-top: 15px;
+  }
+
+  .icon span {
+    display: block;
+    padding-top: 4%;
+  }
 }
