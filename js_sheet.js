@@ -59,3 +59,23 @@ function change() {
   }, 200);
 }
 </script>
+
+<!-- dropdown with links -->
+<script>
+function dropdown_function() {
+  document.getElementById("myDropdown").classList.toggle("show_dropdown");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropdown_button')) {
+    var dropdowns = document.getElementsByClassName("dropdown_content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show_dropdown')) {
+        openDropdown.classList.remove('show_dropdown');
+      }
+    }
+  }
+} 
+</script>
