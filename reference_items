@@ -25,6 +25,7 @@ setup u-shape- https://static1.squarespace.com/static/65660ef22544614ca593676c/t
 --color-green-hover: #b6c1c3;
 --color-black: #180222;
 --color-light-blue: #c3e7ef;
+--color-light-blue-hover: #b8dae3;
 --color-yellow: #e6edaa;
 --color-blue: #405aa8;
 --color-blue-hover: #6177A8;
