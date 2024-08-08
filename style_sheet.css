@@ -251,6 +251,7 @@ a.text-click:hover {
   display: flex;
   width: 100%;
   margin-bottom: 10px;
+  justify-content: space-between;
 
   @media screen and (max-width: 900px) {
     margin-bottom: 3px;
@@ -288,18 +289,30 @@ a.text-click:hover {
   }
 }
 
-
 .two_columns {
-  /* Two equal width columns with titles */
   display: flex;
 
   .column {
-    flex: 50%;
 
     h4 {
       margin-top: 0;
       margin-bottom: -5px;
     }
+  }
+}
+
+.setup_icon {
+  /* Icon for setups */
+  text-align: center;
+  width: 150px;
+
+  p2 {
+    display: block;
+    padding-top: 0;
+  }
+
+  img {
+    width: 70px;
   }
 }
 
@@ -311,15 +324,17 @@ a.text-click:hover {
 }
 
 .dropdown_button {
-  font-size: 120%;
   color: white;
   background-color: var(--color-blue);
-  padding: 16px;
+  width: 150px;
+  height: 50px;
+  font-size: 120%;
   border: none;
+  margin-left: 150px;
+}
 
-  .button:hover {
-    background-color: var(--color-blue-hover);
-  }
+.dropdown_button:hover {
+  background-color: var(--color-blue-hover);
 }
 
 .dropdown_content {
@@ -329,18 +344,49 @@ a.text-click:hover {
   min-width: 150px;
   border: 1px var(--color-green);
   z-index: 1;
+  margin-left: 150px;
+}
 
-  a {
-    color: var(--color-black);
-    padding: 12px 16px;
-    display: block;
-  }
+.dropdown_content a {
+  color: var(--color-black);
+  text-decoration: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: block;
 
-  a:hover {
-    background-color: var(--color-light-blue-hover);
+  .image_text {
+    display: flex;
+    align-items: center;
+
+    img, i {
+      height: 20px !important;
+      float: left;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
   }
+}
+
+.dropdown_content a:hover {
+  background-color: var(--color-light-blue-hover);
 }
 
 .show_dropdown {
   display: block;
+}
+
+.questions {
+  /* Puts icons in row evenly spaced */
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  justify-content: space-between;
+
+  img {
+  	height: 30px;
+  }
+	
+	title {
+		
+	}
 }
