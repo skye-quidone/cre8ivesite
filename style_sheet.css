@@ -29,8 +29,8 @@ html {
 }
 
 .gallery-fullscreen-slideshow[data-width="full"] {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .accordion-divider {
@@ -41,9 +41,9 @@ html {
 
 /* --------------------- pages --------------------- */
 
-/* --------------------- only home page --------------------- */
-#block-yui_3_17_2_1_1720015239357_19291 {
+/* --------------------- home page --------------------- */
 
+#block-yui_3_17_2_1_1720015239357_19291 {
   /* lines between lines in second section */
   h3:not(:first-child) {
     border-top: 1px solid var(--color-blue);
@@ -67,7 +67,6 @@ html {
 #block-90322793d0b24229d39a,
 #block-f120455e0cf5d7653b58,
 #block-3f66047e7d7d98e97b45 {
-
   /* modifying title size in booking process boxes */
   .sqsrte-text-color--accent {
     font-size: 1.3em;
@@ -77,6 +76,8 @@ html {
     }
   }
 }
+
+/* --------------------- amenities page --------------------- */
 
 /* colored side borders on amenities page */
 body#collection-65660ef32544614ca59367b1 {
@@ -88,9 +89,6 @@ body#collection-65660ef32544614ca59367b1 {
     border-right: 25px solid var(--color-yellow);
   }
 }
-
-/* --------------------- spaces --------------------- */
-
 
 /* --------------------- w javascript --------------------- */
 
@@ -277,7 +275,7 @@ a.text-click:hover {
 
   button {
     font-size: 120%;
-    margin-left: 26%;
+    margin-left: 25%;
     color: white;
     background-color: var(--color-blue);
     padding: 2% 8% 2% 8%;
@@ -298,6 +296,7 @@ a.text-click:hover {
   }
 }
 
+
 .map-wrapper {
   /* Space map on spaces page w/ click to jump down */
   width: 100%;
@@ -315,6 +314,7 @@ a.text-click:hover {
   }
 }
 
+
 .icon_row {
   /* Puts icons in row evenly spaced */
   display: flex;
@@ -328,7 +328,7 @@ a.text-click:hover {
   }
 
   .price {
-    width: 200px
+    width: 200px;
   }
 }
 
@@ -350,7 +350,6 @@ a.text-click:hover {
 
 .icon_text_list {
   /* List of icons next to text */
-
   .item {
     img {
       height: 20px !important;
@@ -362,7 +361,9 @@ a.text-click:hover {
   }
 }
 
+
 .two_columns {
+  /* Puts two divs next to each other */
   display: flex;
   flex-direction: column;
 
@@ -399,6 +400,7 @@ a.text-click:hover {
   }
 }
 
+
 .setup_icon {
   /* Icon for setups */
   text-align: center;
@@ -418,7 +420,8 @@ a.text-click:hover {
   }
 }
 
-.questions {
+
+.icon_text {
   /* Puts icons in row evenly spaced */
   display: flex;
   width: 100%;
@@ -430,49 +433,6 @@ a.text-click:hover {
   }
 }
 
-.curved_text {
-  /* list curves used around map on spaces */
-  height: 600px;
-
-  .right {
-    .curve {
-      border: 350px solid blue;
-      opacity: 0;
-      display: block;
-      float: left;
-      background-color: red;
-      clip-path: circle(33rem at -25rem center);
-      shape-outside: circle(33rem at -25rem center);
-    }
-
-    ul {
-      padding: 2em 0;
-      list-style: none;
-      color: black;
-      text-align: left;
-      line-height: 50px;
-    }
-  }
-
-  .left {
-    .curve {
-      border: 350px solid red;
-      opacity: 0;
-      display: block;
-      float: right;
-      clip-path: circle(33rem at 75rem center);
-      shape-outside: circle(33rem at 75rem center);
-    }
-
-    ul {
-      padding: 2em 0;
-      list-style: none;
-      color: black;
-      text-align: right;
-      line-height: 50px;
-    }
-  }
-}
 
 .card_scroll {
   /* card scroll for bottom of page (wip) */
@@ -508,6 +468,7 @@ a.text-click:hover {
     }
   }
 }
+
 
 .modal {
   /* popup modal (wip) */
