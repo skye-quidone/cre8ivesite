@@ -44,6 +44,7 @@ html {
 /* --------------------- home page --------------------- */
 
 #block-yui_3_17_2_1_1720015239357_19291 {
+
   /* lines between lines in second section */
   h3:not(:first-child) {
     border-top: 1px solid var(--color-blue);
@@ -67,6 +68,7 @@ html {
 #block-90322793d0b24229d39a,
 #block-f120455e0cf5d7653b58,
 #block-3f66047e7d7d98e97b45 {
+
   /* modifying title size in booking process boxes */
   .sqsrte-text-color--accent {
     font-size: 1.3em;
@@ -87,6 +89,15 @@ body#collection-65660ef32544614ca59367b1 {
   @media screen and (max-width: 900px) {
     border-left: 25px solid var(--color-yellow);
     border-right: 25px solid var(--color-yellow);
+  }
+}
+
+/* --------------------- spaces page --------------------- */
+
+/* making text on questions? inquiries? button smaller so it fits on mobile */
+#block-4df832e96b10fa56a824 * {
+  @media screen and (max-width: 900px) {
+    font-size: 107%;
   }
 }
 
@@ -136,7 +147,6 @@ a.text-click:hover {
   transition: all .5s ease;
 }
 
-
 .slideshow-container {
   /* slideshow in code box */
   max-width: 100%;
@@ -183,7 +193,6 @@ a.text-click:hover {
   }
 }
 
-
 #changeText {
   /* swap between words on home page */
   opacity: 1;
@@ -210,7 +219,6 @@ a.text-click:hover {
   height: 50px;
   font-size: 120%;
   border: none;
-  margin-left: 150px;
 }
 
 .dropdown_button:hover {
@@ -224,7 +232,7 @@ a.text-click:hover {
   min-width: 150px;
   border: 1px var(--color-green);
   z-index: 1;
-  margin-left: 150px;
+  text-align: center;
 }
 
 .dropdown_content a {
@@ -260,6 +268,24 @@ a.text-click:hover {
 
 /* --------------------- classes --------------------- */
 
+.map-wrapper {
+  /* Space map on spaces page w/ click to jump down */
+  width: 100%;
+  position: relative;
+
+  .map-area {
+    position: absolute;
+    fill-opacity: 0;
+  }
+
+  rect:hover {
+    fill-opacity: 0.3;
+    fill: var(--color-light-blue);
+    filter: blur(10px);
+  }
+}
+
+
 .space_desc_box {
   /* box with dashed edges- used in Spaces page */
   border: 1px dashed;
@@ -271,6 +297,11 @@ a.text-click:hover {
     margin: 0.2em auto 0.3em auto;
     color: var(--color-blue);
     text-align: center;
+
+    @media screen and (max-width: 900px) {
+      font-size: 130%;
+      margin-bottom: 25px;
+    }
   }
 
   button {
@@ -297,67 +328,55 @@ a.text-click:hover {
 }
 
 
-.map-wrapper {
-  /* Space map on spaces page w/ click to jump down */
-  width: 100%;
-  position: relative;
-
-  .map-area {
-    position: absolute;
-    fill-opacity: 0;
-  }
-
-  rect:hover {
-    fill-opacity: 0.3;
-    fill: var(--color-light-blue);
-    filter: blur(10px);
-  }
-}
-
-
 .icon_row {
   /* Puts icons in row evenly spaced */
-  display: flex;
   width: 100%;
   margin-bottom: 10px;
-  justify-content: space-between;
-
+  margin-top: -10px;
+  display: grid;
+  grid-auto-rows: max-content;
+  align-items: center;
 
   @media screen and (max-width: 900px) {
-    margin-bottom: 3px;
+    margin-bottom: 20px;
+    font-size: 85%;
+    margin-top: -20px;
+    grid-auto-rows: 70px;
   }
 
   .price {
-    width: 200px;
+    @media screen and (max-width: 900px) {
+      width: 140px;
+      padding-top: 10%;
+    }
   }
 }
 
-.space_icon {
-  /* Icon for guests, sqft, etc */
-  text-align: center;
-  margin: auto;
-
-  p2 {
-    display: block;
-    padding-top: 4%;
-  }
-
-  img {
-    height: 45px;
-  }
+.icon_row>* {
+  grid-row: 1;
+  height: 90%;
 }
 
 
 .icon_text_list {
   /* List of icons next to text */
+
   .item {
+    margin-bottom: -5px;
+
     img {
       height: 20px !important;
       float: left;
       margin-right: 10px;
+
+      @media screen and (max-width: 900px) {
+        margin-right: 1px;
+      }
     }
 
-    margin-bottom: -5px;
+    @media screen and (max-width: 900px) {
+      margin-bottom: -10px;
+    }
   }
 }
 
@@ -401,6 +420,32 @@ a.text-click:hover {
 }
 
 
+.space_icon {
+  /* Icon for guests, sqft, etc */
+  text-align: center;
+
+  p2 {
+    display: block;
+    padding-top: 2%;
+  }
+
+  img {
+    height: 45px;
+  }
+
+  @media screen and (max-width: 900px) {
+    img {
+      height: 35px;
+    }
+
+    p2 {
+      line-height: 20px;
+      padding-top: 5px;
+    }
+  }
+}
+
+
 .setup_icon {
   /* Icon for setups */
   text-align: center;
@@ -434,76 +479,13 @@ a.text-click:hover {
 }
 
 
-.card_scroll {
-  /* card scroll for bottom of page (wip) */
-  display: flex;
-  overflow-x: auto;
-  gap: 40px;
-  height: 280px;
-
-  .studio_card {
-    width: 200px;
-    height: 250px;
-    background-color: var(--color-light-blue);
+.space_page {
+  h2 {
     text-align: center;
-    flex-shrink: 0;
-    margin-bottom: 10px;
-    border: 1px solid var(--color-green);
+    margin-top: 0px;
 
-    img {
-      width: 180px;
-      margin-top: 20px;
-      margin-bottom: -20px;
-    }
-
-    h3 {
-      line-height: 10px;
-    }
-
-    button {
-      color: white;
-      background-color: var(--color-blue);
-      padding: 2% 8% 2% 8%;
-      border: none;
+    @media screen and (max-width: 900px) {
+      font-size: 160%;
     }
   }
-}
-
-
-.modal {
-  /* popup modal (wip) */
-  display: none;
-  position: fixed;
-  z-index: 99999;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-  background-color: #fefefe;
-  z-index: 99999;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
 }
