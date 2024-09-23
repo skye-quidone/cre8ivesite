@@ -79,8 +79,6 @@ html {
   }
 }
 
-/* --------------------- amenities page --------------------- */
-
 /* colored side borders on amenities page */
 body#collection-65660ef32544614ca59367b1 {
   border-left: 50px solid var(--color-yellow);
@@ -92,9 +90,22 @@ body#collection-65660ef32544614ca59367b1 {
   }
 }
 
-/* --------------------- spaces page --------------------- */
+/* colored side borders on booking pages page */
+#collection-66958a2e8ed68a155fb7bda1, #collection-66bb8569d40cb46c35978715 {
+  border-left: 25px solid var(--color-yellow);
+  border-right: 25px solid var(--color-yellow);
 
-/* making text on questions? inquiries? button smaller so it fits on mobile */
+  @media screen and (max-width: 900px) {
+    border-left: 10px solid var(--color-yellow);
+    border-right: 10px solid var(--color-yellow);
+  }
+}
+
+[data-section-id="66958a2e8ed68a155fb7bda7"], [data-section-id="66bb8569d40cb46c35978718"] .section-background {
+  background-color: #f8f9fa;
+}
+
+/* making text on questions? inquiries? button smaller so it fits on mobile on indvid space pages */
 #block-4df832e96b10fa56a824 * {
   @media screen and (max-width: 900px) {
     font-size: 107%;
@@ -297,10 +308,11 @@ a.text-click:hover {
     margin: 0.2em auto 0.3em auto;
     color: var(--color-blue);
     text-align: center;
+    font-size: 170%;
+      margin-bottom: 25px;
 
     @media screen and (max-width: 900px) {
       font-size: 130%;
-      margin-bottom: 25px;
     }
   }
 
@@ -330,18 +342,15 @@ a.text-click:hover {
 
 .icon_row {
   /* Puts icons in row evenly spaced */
-  width: 100%;
-  margin-bottom: 10px;
-  margin-top: -10px;
-  display: grid;
-  grid-auto-rows: max-content;
-  align-items: center;
+  width: 90%;
+  display: inline-flex;
+  justify-content: space-between;
+  grid-gap: 20px;
 
   @media screen and (max-width: 900px) {
     margin-bottom: 20px;
     font-size: 85%;
     margin-top: -20px;
-    grid-auto-rows: 70px;
   }
 
   .price {
@@ -353,13 +362,18 @@ a.text-click:hover {
 }
 
 .icon_row>* {
-  grid-row: 1;
   height: 90%;
+}
+
+.row_wrapper {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 
 .icon_text_list {
   /* List of icons next to text */
+  width: 200px;
 
   .item {
     margin-bottom: -5px;
@@ -370,7 +384,7 @@ a.text-click:hover {
       margin-right: 10px;
 
       @media screen and (max-width: 900px) {
-        margin-right: 1px;
+        margin-right: 5px;
       }
     }
 
@@ -383,12 +397,11 @@ a.text-click:hover {
 
 .two_columns {
   /* Puts two divs next to each other */
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 
   .column {
-    flex: 50%;
-
     h4 {
       margin-top: 0;
       margin-bottom: -5px;
@@ -413,11 +426,61 @@ a.text-click:hover {
   @media screen and (max-width: 900px) {
     margin-bottom: 10px;
   }
+}
 
-  @media screen and (min-width: 900px) {
-    flex-direction: row;
+
+.amenities_columns {
+  /* Puts two divs next to each other */
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  column-gap: 30px;
+  justify-content: center;
+  
+  @media screen and (max-width: 900px){
+    margin-bottom: 15px;
+  }
+
+  .column {
+    h4 {
+      margin-top: 0;
+    }
+
+    .column_title {
+      font-size: 150%;
+      margin-bottom: 10px;
+      text-align: center;
+
+      @media screen and (max-width: 900px) {
+        font-size: 130%;
+      margin-bottom: 0px;
+      }
+    }
+    
+    .mobile {
+      @media screen and (max-width: 900px) {
+        font-size: 120%;
+        margin-top: 10px;
+        margin-bottom: -5px;
+        justify-text: center;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    grid-template-columns: repeat(auto-fit, 80vw);
   }
 }
+
+#amenities_col {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0px;
+  
+  @media screen and (max-width: 900px) {
+    padding-left: 20px;
+    grid-template-columns: repeat(auto-fit, 80vw);
+  }
+}
+
 
 
 .space_icon {
@@ -445,15 +508,25 @@ a.text-click:hover {
   }
 }
 
-
 .setup_icon {
+  /* Puts setups in row evenly spaced */
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: center;
+    
+  .icon {
   /* Icon for setups */
   text-align: center;
   width: 150px;
+    height: 100%;
 
   p2 {
     display: block;
-    margin-top: -10px;
+    margin-top: 0px;
   }
 
   img {
@@ -462,6 +535,7 @@ a.text-click:hover {
 
   @media screen and (max-width: 900px) {
     width: 120px;
+  }
   }
 }
 
@@ -482,7 +556,7 @@ a.text-click:hover {
 .space_page {
   h2 {
     text-align: center;
-    margin-top: 0px;
+    margin: 0;
 
     @media screen and (max-width: 900px) {
       font-size: 160%;
