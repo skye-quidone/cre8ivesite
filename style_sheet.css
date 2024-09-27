@@ -6,11 +6,10 @@
   --color-light-blue-hover: #b8dae3;
   --color-yellow: #e6edaa;
   --color-blue: #405aa8;
-  --color-blue-hover: #6177A8;
+  --color-blue-hover: #6177a8;
 }
 
 /* --------------------- editing squarespace defaults --------------------- */
- 
 
 html,
 body {
@@ -41,6 +40,17 @@ html {
 
 /* --------------------- pages --------------------- */
 
+/* --------------------- home page --------------------- */
+
+#block-yui_3_17_2_1_1720015239357_19291 {
+  /* lines between lines in second section */
+  h3:not(:first-child) {
+    border-top: 1px solid var(--color-blue);
+    padding-top: 10px;
+    margin-top: -17px;
+  }
+}
+
 #block-f9993bdf5703f951614f,
 #block-58433e1404ca0f91b26a,
 #block-a57592029078f77dbbd1,
@@ -56,7 +66,6 @@ html {
 #block-90322793d0b24229d39a,
 #block-f120455e0cf5d7653b58,
 #block-3f66047e7d7d98e97b45 {
-
   /* modifying title size in booking process boxes */
   .sqsrte-text-color--accent {
     font-size: 1.3em;
@@ -79,7 +88,8 @@ body#collection-65660ef32544614ca59367b1 {
 }
 
 /* colored side borders on booking pages page */
-#collection-66958a2e8ed68a155fb7bda1, #collection-66bb8569d40cb46c35978715 {
+#collection-66958a2e8ed68a155fb7bda1,
+#collection-66bb8569d40cb46c35978715 {
   border-left: 25px solid var(--color-yellow);
   border-right: 25px solid var(--color-yellow);
 
@@ -89,7 +99,8 @@ body#collection-65660ef32544614ca59367b1 {
   }
 }
 
-[data-section-id="66958a2e8ed68a155fb7bda7"], [data-section-id="66bb8569d40cb46c35978718"] .section-background {
+[data-section-id="66958a2e8ed68a155fb7bda7"],
+[data-section-id="66bb8569d40cb46c35978718"] .section-background {
   background-color: #f8f9fa;
 }
 
@@ -97,6 +108,13 @@ body#collection-65660ef32544614ca59367b1 {
 #block-4df832e96b10fa56a824 * {
   @media screen and (max-width: 900px) {
     font-size: 107%;
+  }
+}
+
+section[data-section-id="66f7036ff0b4252c55d3ec1a"] {
+  /* putting padding on top/bottom of text at top of spaces page */
+  @media screen and (max-width: 900px) {
+    padding: 10px 0;
   }
 }
 
@@ -137,28 +155,32 @@ a.text-click:hover {
   /*Position Out of View*/
   bottom: -150px;
   opacity: 0;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 #back-to-top.show-btt {
   bottom: 0;
   opacity: 1;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .slideshow-container {
   /* slideshow in code box */
   max-width: 100%;
   position: relative;
-  margin: auto;
   max-height: 425px;
 
   @media screen and (max-width: 900px) {
-    max-height: 100px;
+    max-height: 300px;
   }
 
   img {
     vertical-align: middle;
+    max-height: 425px;
+
+    @media screen and (max-width: 900px) {
+      max-height: 300px;
+    }
   }
 
   .mySlides {
@@ -204,7 +226,6 @@ a.text-click:hover {
   opacity: 0 !important;
 }
 
-
 .dropdown {
   /* dropdown with links */
   position: relative;
@@ -218,6 +239,10 @@ a.text-click:hover {
   height: 50px;
   font-size: 120%;
   border: none;
+
+  @media screen and (max-width: 900px) {
+    width: 110px;
+  }
 }
 
 .dropdown_button:hover {
@@ -228,10 +253,14 @@ a.text-click:hover {
   display: none;
   position: absolute;
   background-color: var(--color-light-blue);
-  min-width: 150px;
+  width: 150px;
   border: 1px var(--color-green);
   z-index: 1;
   text-align: center;
+
+  @media screen and (max-width: 900px) {
+    width: 110px;
+  }
 }
 
 .dropdown_content a {
@@ -240,6 +269,11 @@ a.text-click:hover {
   padding-top: 12px;
   padding-bottom: 12px;
   display: block;
+
+  @media screen and (max-width: 900px) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 
   .image_text {
     display: flex;
@@ -263,8 +297,6 @@ a.text-click:hover {
   display: block;
 }
 
-
-
 /* --------------------- classes --------------------- */
 
 .map-wrapper {
@@ -284,7 +316,6 @@ a.text-click:hover {
   }
 }
 
-
 .space_desc_box {
   /* box with dashed edges- used in Spaces page */
   border: 1px dashed;
@@ -297,10 +328,11 @@ a.text-click:hover {
     color: var(--color-blue);
     text-align: center;
     font-size: 170%;
-      margin-bottom: 25px;
+    margin-bottom: 15px;
 
     @media screen and (max-width: 900px) {
       font-size: 130%;
+      margin-bottom: 10px;
     }
   }
 
@@ -325,31 +357,34 @@ a.text-click:hover {
   button:hover {
     background-color: var(--color-blue-hover);
   }
+  
+  .par {
+    margin-top: -20px;
+  }
 }
-
 
 .icon_row {
   /* Puts icons in row evenly spaced */
   width: 90%;
   display: inline-flex;
   justify-content: space-evenly;
-  grid-gap: 20px;
 
   @media screen and (max-width: 900px) {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 85%;
-    margin-top: -20px;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
   }
 
   .price {
     @media screen and (max-width: 900px) {
       width: 140px;
-      padding-top: 10%;
     }
   }
 }
 
-.icon_row>* {
+.icon_row > * {
   height: 90%;
 }
 
@@ -358,30 +393,32 @@ a.text-click:hover {
   margin-bottom: 10px;
 }
 
-
 .icon_text_list {
   /* List of icons next to text */
   width: 200px;
 
   .item {
-    margin-bottom: -5px;
+    margin-top: -10px;
 
     img {
       height: 20px !important;
       float: left;
       margin-right: 10px;
-
-      @media screen and (max-width: 900px) {
-        margin-right: 5px;
-      }
     }
 
     @media screen and (max-width: 900px) {
-      margin-bottom: -10px;
+      margin-top: -10px;
+
+      img {
+        margin-right: -50px;
+      }
+
+      p {
+        margin-left: -40px;
+      }
     }
   }
 }
-
 
 .two_columns {
   /* Puts two divs next to each other */
@@ -416,15 +453,14 @@ a.text-click:hover {
   }
 }
 
-
 .amenities_columns {
   /* Puts two divs next to each other */
   display: grid;
   grid-template-columns: 1.25fr 1fr;
   column-gap: 30px;
   justify-content: center;
-  
-  @media screen and (max-width: 900px){
+
+  @media screen and (max-width: 900px) {
     margin-bottom: 15px;
   }
 
@@ -440,10 +476,10 @@ a.text-click:hover {
 
       @media screen and (max-width: 900px) {
         font-size: 130%;
-      margin-bottom: 0px;
+        margin-bottom: 0px;
       }
     }
-    
+
     .mobile {
       @media screen and (max-width: 900px) {
         font-size: 120%;
@@ -453,7 +489,7 @@ a.text-click:hover {
       }
     }
   }
-  
+
   @media screen and (max-width: 900px) {
     grid-template-columns: repeat(auto-fit, 80vw);
   }
@@ -462,14 +498,12 @@ a.text-click:hover {
 #amenities_col {
   grid-template-columns: 1fr 1fr;
   column-gap: 0px;
-  
+
   @media screen and (max-width: 900px) {
     padding-left: 20px;
     grid-template-columns: repeat(auto-fit, 80vw);
   }
 }
-
-
 
 .space_icon {
   /* Icon for guests, sqft, etc */
@@ -493,6 +527,8 @@ a.text-click:hover {
       line-height: 20px;
       padding-top: 5px;
     }
+
+    max-width: 110px;
   }
 }
 
@@ -505,28 +541,27 @@ a.text-click:hover {
   flex-wrap: wrap;
   row-gap: 10px;
   justify-content: center;
-    
+
   .icon {
-  /* Icon for setups */
-  text-align: center;
-  width: 150px;
+    /* Icon for setups */
+    text-align: center;
+    width: 150px;
     height: 100%;
 
-  p2 {
-    display: block;
-    margin-top: 0px;
-  }
+    p2 {
+      display: block;
+      margin-top: 0px;
+    }
 
-  img {
-    width: 70px;
-  }
+    img {
+      width: 70px;
+    }
 
-  @media screen and (max-width: 900px) {
-    width: 120px;
-  }
+    @media screen and (max-width: 900px) {
+      width: 120px;
+    }
   }
 }
-
 
 .icon_text {
   /* Puts icons in row evenly spaced */
@@ -540,7 +575,6 @@ a.text-click:hover {
   }
 }
 
-
 .space_page {
   h2 {
     text-align: center;
@@ -549,5 +583,9 @@ a.text-click:hover {
     @media screen and (max-width: 900px) {
       font-size: 160%;
     }
+  }
+  
+  .par_spacer {
+    margin-bottom: 10px;
   }
 }
