@@ -1,3 +1,9 @@
+<!-- Header -->
+
+<script src="https://kit.fontawesome.com/dd04f97c73.js" crossorigin="anonymous"></script>
+
+<!-- Footer -->
+  
 <!-- slide show in code box -->
 <script>
 let slideIndex = [1, 1, 1, 1, 1, 1, 1];
