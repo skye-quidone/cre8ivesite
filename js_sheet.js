@@ -1,14 +1,3 @@
-<script src="https://kit.fontawesome.com/dd04f97c73.js" crossorigin="anonymous"></script> 
-    
-<!-- home page- mouseover for process -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $('.block a:contains("clickable")').addClass('text-click');
-});
-</script>
-
-
 <!-- slide show in code box -->
 <script>
 let slideIndex = [1, 1, 1, 1, 1, 1, 1];
@@ -94,7 +83,7 @@ function Copy() {
 
 
 
-<!-- modals -->
+<!-- modals (not in use) -->
 <script>
 // Get the button that opens the modal
 var btn = document.querySelectorAll("button.modal-button");
