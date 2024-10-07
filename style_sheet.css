@@ -622,23 +622,26 @@ a.text-click:hover {
 
   @media screen and (max-width: 900px) {
     grid-template-columns: 1fr;
+    gap: 25px;
   }
   
   .procedures_box {
-    min-width: 0;
     height: 440px;
-    background: linear-gradient(white 0%, white 30%,var(--color-green) 30%, var(--color-green) 100%);
+    background: linear-gradient(white 0%, white 35%,var(--color-green) 35%, var(--color-green) 100%);
     box-shadow: 2px 5px 5px #A9A9A9;
     border-radius: 10px;
-
-    img_holder {
+    
+    @media screen and (max-width: 900px) {
+      height: 380px;
+    }
+    
+    img {
       display: block;
-      height: 28%;
-      width: 100%;
-
-      img {
-        max-width: 80%;
-      }
+      max-height: 29%;
+      max-width: 70%;
+      margin: auto;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
 
     h3 {
@@ -646,7 +649,7 @@ a.text-click:hover {
       color: white;
       text-align: center;
       font-size: 130%;
-      margin: 15px 10px 5px 10px;
+      margin: 0 10px 5px 10px;
     }
 
     p2 {
@@ -658,7 +661,7 @@ a.text-click:hover {
   }
 
   .procedures_box:hover {
-   	background: linear-gradient(#f9fafa 0%, #f9fafa 30%, var(--color-green-hover) 30%, var(--color-green-hover) 100%);
+   	background: linear-gradient(#f9fafa 0%, #f9fafa 35%, var(--color-green-hover) 35%, var(--color-green-hover) 100%);
     box-shadow: 5px 8px 5px #A9A9A9;
   }
 }
