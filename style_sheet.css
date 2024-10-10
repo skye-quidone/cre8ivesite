@@ -44,7 +44,7 @@ html {
 /* --------------------- pages --------------------- */
 
 /* colored side borders on amenities page */
-#collection-65660ef32544614ca59367b1 {
+#collection-6704415f1b174e1d0c91139b {
   border-left: 50px solid var(--color-yellow);
   border-right: 50px solid var(--color-yellow);
 
@@ -55,8 +55,8 @@ html {
 }
 
 /* colored side borders on booking pages page */
-#collection-66958a2e8ed68a155fb7bda1,
-#collection-66bb8569d40cb46c35978715 {
+#collection-6706af71b4caf87b33dda909,
+#collection-6706b0778b49cb4249a26135 {
   border-left: 25px solid var(--color-yellow);
   border-right: 25px solid var(--color-yellow);
 
@@ -67,20 +67,23 @@ html {
 }
 
 /* making section background match skedda on booking pages */
-[data-section-id="66958a2e8ed68a155fb7bda7"],
-[data-section-id="66bb8569d40cb46c35978718"] .section-background {
+[data-section-id="6706b0d3328b0015bdc1cda4"] .section-background {
+  background-color: #f8f9fa;
+}
+
+[data-section-id="6706b03159c21261ba4aeb7e"] .section-background {
   background-color: #f8f9fa;
 }
 
 /* making text on questions? inquiries? button smaller so it fits on mobile on indvid space pages */
-#block-4df832e96b10fa56a824 * {
+#block-fe3f804f452492d2208a, #block-263c398b15aebf8a620f, #block-b83e8c352f72ee30a31c, #block-43be643f2cc908f1a27f, #block-70570e3aab149c9429a9, #block-7b4dc8fdc3186e3ef683, #block-0913823673ee51ea59e6  * {
   @media screen and (max-width: 900px) {
     font-size: 107%;
   }
 }
 
 /* putting padding on top/bottom of text at top of spaces page */
-section[data-section-id="66f7036ff0b4252c55d3ec1a"] {
+section[data-section-id="67043acdbd328808348faf9a"] {
   @media screen and (max-width: 900px) {
     padding: 10px 0;
   }
