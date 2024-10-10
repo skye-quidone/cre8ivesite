@@ -1,9 +1,37 @@
-<!-- Header -->
+<!-- scroll to top -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+$(function(){
+  function showBackToTop(){
+    $('#back-to-top').addClass('show-btt');
+  }
+  function hideBackToTop(){
+    $('#back-to-top').removeClass('show-btt');
+  }
+  function checkScrollPos(){
+    if ($(this).scrollTop() >= 1600) { //if scroll position is lower than 700px from the top of the screen
+      showBackToTop();
+    } else {
+      hideBackToTop()
+    }
+  }
+  $(window).on('scroll', function(){
+    checkScrollPos();
+  });
+  checkScrollPos();
+})
+</script>
 
-<script src="https://kit.fontawesome.com/dd04f97c73.js" crossorigin="anonymous"></script>
 
-<!-- Footer -->
-  
+<!-- home page- mouseover for process -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.block a:contains("clickable")').addClass('text-click');
+});
+</script>
+
+
 <!-- slide show in code box -->
 <script>
 let slideIndex = [1, 1, 1, 1, 1, 1, 1];
@@ -89,7 +117,7 @@ function Copy() {
 
 
 
-<!-- modals (not in use) -->
+<!-- modals -->
 <script>
 // Get the button that opens the modal
 var btn = document.querySelectorAll("button.modal-button");
