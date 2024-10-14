@@ -606,7 +606,7 @@ html {
 
 @media screen and (max-width: 900px) {
   .amenities_columns {
-    margin-bottom: 15px;
+    margin: auto 0 15px -5px;
     grid-template-columns: repeat(auto-fit, 80vw);
 
     .column {
@@ -619,7 +619,7 @@ html {
         font-size: 120%;
         margin-top: 10px;
         margin-bottom: -5px;
-        justify-text: center;
+        text-justify: center;
       }
     }
   }
