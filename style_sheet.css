@@ -47,10 +47,12 @@ html {
 #collection-6704415f1b174e1d0c91139b {
   border-left: 50px solid var(--color-yellow);
   border-right: 50px solid var(--color-yellow);
+}
 
-  @media screen and (max-width: 900px) {
-    border-left: 25px solid var(--color-yellow);
-    border-right: 25px solid var(--color-yellow);
+@media screen and (max-width: 900px) {
+  #collection-6704415f1b174e1d0c91139b {
+    border-left: 20px solid var(--color-yellow);
+    border-right: 20px solid var(--color-yellow);
   }
 }
 
@@ -59,8 +61,11 @@ html {
 #collection-6706b0778b49cb4249a26135 {
   border-left: 25px solid var(--color-yellow);
   border-right: 25px solid var(--color-yellow);
+}
 
-  @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
+  #collection-6706af71b4caf87b33dda909,
+  #collection-6706b0778b49cb4249a26135 {
     border-left: 10px solid var(--color-yellow);
     border-right: 10px solid var(--color-yellow);
   }
@@ -76,15 +81,21 @@ html {
 }
 
 /* making text on questions? inquiries? button smaller so it fits on mobile on indvid space pages */
-#block-fe3f804f452492d2208a, #block-263c398b15aebf8a620f, #block-b83e8c352f72ee30a31c, #block-43be643f2cc908f1a27f, #block-70570e3aab149c9429a9, #block-7b4dc8fdc3186e3ef683, #block-0913823673ee51ea59e6  * {
-  @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
+  #block-fe3f804f452492d2208a,
+  #block-263c398b15aebf8a620f,
+  #block-b83e8c352f72ee30a31c,
+  #block-43be643f2cc908f1a27f,
+  #block-70570e3aab149c9429a9,
+  #block-7b4dc8fdc3186e3ef683,
+  #block-0913823673ee51ea59e6 * {
     font-size: 107%;
   }
 }
 
 /* putting padding on top/bottom of text at top of spaces page */
-section[data-section-id="67043acdbd328808348faf9a"] {
-  @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
+  section[data-section-id="67043acdbd328808348faf9a"] {
     padding: 10px 0;
   }
 }
@@ -100,8 +111,8 @@ section[data-section-id="67043acdbd328808348faf9a"] {
 
 /* --------------------- w javascript --------------------- */
 
+/* scroll back to the map on spaces page */
 #back-to-top {
-  /* scroll back to the map on spaces page */
   height: 50px;
   width: 50px;
   position: fixed;
@@ -124,23 +135,15 @@ section[data-section-id="67043acdbd328808348faf9a"] {
   transition: all 0.5s ease;
 }
 
+/* slideshow in code box */
 .slideshow-container {
-  /* slideshow in code box */
   max-width: 100%;
   position: relative;
   max-height: 425px;
 
-  @media screen and (max-width: 900px) {
-    max-height: 300px;
-  }
-
   img {
     vertical-align: middle;
     max-height: 425px;
-
-    @media screen and (max-width: 900px) {
-      max-height: 300px;
-    }
   }
 
   .mySlides {
@@ -167,15 +170,23 @@ section[data-section-id="67043acdbd328808348faf9a"] {
   border-radius: 3px 0 0 3px;
 }
 
-.prev:hover,
-.next:hover {
-  @media screen and (min-width: 900px) {
+@media screen and (max-width: 900px) {
+  .slideshow-container {
+    max-height: 300px;
+
+    img {
+      max-height: 300px;
+    }
+  }
+
+  .prev:hover,
+  .next:hover {
     background-color: var(--color-light-blue);
   }
 }
 
+/* swap between words on home page */
 #changeText {
-  /* swap between words on home page */
   opacity: 1;
   transition: opacity 0.5s;
   display: inline-block;
@@ -186,8 +197,8 @@ section[data-section-id="67043acdbd328808348faf9a"] {
   opacity: 0 !important;
 }
 
+/* dropdown with links */
 .dropdown {
-  /* dropdown with links */
   position: relative;
   display: inline-block;
 }
@@ -199,10 +210,6 @@ section[data-section-id="67043acdbd328808348faf9a"] {
   height: 50px;
   font-size: 120%;
   border: none;
-
-  @media screen and (max-width: 900px) {
-    width: 110px;
-  }
 }
 
 .dropdown_button:hover {
@@ -217,10 +224,6 @@ section[data-section-id="67043acdbd328808348faf9a"] {
   border: 1px var(--color-green);
   z-index: 1;
   text-align: center;
-
-  @media screen and (max-width: 900px) {
-    width: 110px;
-  }
 }
 
 .dropdown_content a {
@@ -229,11 +232,6 @@ section[data-section-id="67043acdbd328808348faf9a"] {
   padding-top: 12px;
   padding-bottom: 12px;
   display: block;
-
-  @media screen and (max-width: 900px) {
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
 
   .image_text {
     display: flex;
@@ -257,10 +255,25 @@ section[data-section-id="67043acdbd328808348faf9a"] {
   display: block;
 }
 
+@media screen and (max-width: 900px) {
+  .dropdown_button {
+    width: 110px;
+  }
+
+  .dropdown_content {
+    width: 110px;
+  }
+
+  .dropdown_content a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
 /* --------------------- classes --------------------- */
 
+/* Space map on spaces page w/ click to jump down */
 .map-wrapper {
-  /* Space map on spaces page w/ click to jump down */
   width: 100%;
   position: relative;
 
@@ -273,7 +286,7 @@ section[data-section-id="67043acdbd328808348faf9a"] {
     fill-opacity: 0.3;
     fill: var(--color-light-blue);
   }
-  
+
   polygon:hover {
     fill-opacity: 0.3;
     fill: var(--color-light-blue);
@@ -281,323 +294,44 @@ section[data-section-id="67043acdbd328808348faf9a"] {
   }
 }
 
-.space_desc_box {
-  /* box with dashed edges- used in Spaces page */
-  border: 2px solid #A9A9A9;
-  box-shadow: 2px 5px 5px #A9A9A9;
-  padding: 1% 3% 2% 3%;
-  height: 400px;
-  background: white;
-
-  h3 {
-    margin: 0.2em auto 0.3em auto;
-    color: var(--color-blue);
-    text-align: center;
-    font-size: 170%;
-    margin-bottom: 15px;
-
-    @media screen and (max-width: 900px) {
-      font-size: 130%;
-      margin-bottom: 10px;
-    }
-  }
-
-  button {
-    font-size: 120%;
-    margin-left: 25%;
-    color: white;
-    background-color: var(--color-blue);
-    padding: 2% 8% 2% 8%;
-    position: absolute;
-    top: 78%;
-    border: none;
-    white-space: nowrap;
-    overflow: hidden;
-
-    @media screen and (max-width: 900px) {
-      margin-left: 12%;
-      top: 82%;
-    }
-  }
-
-  button:hover {
-    background-color: var(--color-blue-hover);
-  }
-  
-  .par {
-    @media screen and (max-width: 900px) {
-    	margin-top: -20px;
-  	}
-  }
-}
-
-.icon_row {
-  /* Puts icons in row evenly spaced */
-  width: 90%;
-  display: inline-flex;
-  justify-content: space-evenly;
-
-  @media screen and (max-width: 900px) {
-    margin-bottom: 10px;
-    font-size: 85%;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 10px;
-  }
-
-  .price {
-    @media screen and (max-width: 900px) {
-      width: 140px;
-    }
-  }
-}
-
-.icon_row > * {
-  height: 90%;
-}
-
-.row_wrapper {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.icon_text_list {
-  /* List of icons next to text */
-  min-width: 200px;
-
-  .item {
-    margin-top: -10px;
-
-    img {
-      height: 20px !important;
-      float: left;
-      margin-right: 10px;
-    }
-
-    @media screen and (max-width: 900px) {
-      margin-top: -10px;
-
-      img {
-        margin-right: -50px;
-      }
-
-      p {
-        margin-left: -40px;
-      }
-    }
-  }
-}
-
-.amenities_text_list {
-  /* List of icons next to text */
-  min-width: 200px;
-
-  .item {
-    margin-top: -10px;
-
-    img {
-      height: 20px !important;
-      float: left;
-      margin-right: 10px;
-    }
-  }
-}
-
-
-.two_columns {
-  /* Puts two divs next to each other */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-
-  .column {
-    h4 {
-      margin-top: 0;
-      margin-bottom: -5px;
-    }
-
-    .column_title {
-      font-size: 150%;
-      margin-bottom: 10px;
-      text-align: center;
-
-      @media screen and (max-width: 900px) {
-        margin-bottom: 10px;
-        font-size: 130%;
-      }
-    }
-
-    @media screen and (max-width: 900px) {
-      margin-bottom: 5px;
-    }
-  }
-
-  @media screen and (max-width: 900px) {
-    margin-bottom: 10px;
-  }
-}
-
-.amenities_columns {
-  /* Puts two divs next to each other */
-  display: grid;
-  grid-template-columns: 1.25fr 1fr;
-  column-gap: 30px;
-  justify-content: center;
-
-  @media screen and (max-width: 900px) {
-    margin-bottom: 15px;
-  }
-
-  .column {
-    h4 {
-      margin-top: 0;
-    }
-
-    .column_title {
-      font-size: 150%;
-      margin-bottom: 10px;
-      text-align: center;
-
-      @media screen and (max-width: 900px) {
-        font-size: 130%;
-        margin-bottom: 0px;
-      }
-    }
-
-    .mobile {
-      @media screen and (max-width: 900px) {
-        font-size: 120%;
-        margin-top: 10px;
-        margin-bottom: -5px;
-        justify-text: center;
-      }
-    }
-  }
-
-  @media screen and (max-width: 900px) {
-    grid-template-columns: repeat(auto-fit, 80vw);
-  }
-}
-
-#amenities_col {
-  /* columns inside amenities columns */
-  width: 100%;
-  grid-template-columns: repeat(2, minmax(250px, 1fr));
-  column-gap: 0px;
-
-  @media screen and (max-width: 900px) {
-    padding-left: 20px;
-    grid-template-columns: repeat(auto-fit, 80vw);
-  }
-}
-
-.space_icon {
-  /* Icon for guests, sqft, etc */
-  text-align: center;
-
-  p2 {
-    display: block;
-    padding-top: 2%;
-  }
-
-  img {
-    height: 45px;
-  }
-
-  @media screen and (max-width: 900px) {
-    img {
-      height: 35px;
-    }
-
-    p2 {
-      line-height: 20px;
-      padding-top: 5px;
-    }
-
-    max-width: 110px;
-  }
-}
-
-.setup_icon {
-  /* Puts setups in row evenly spaced */
-  width: 100%;
-  margin-bottom: 10px;
-  margin-top: -10px;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 10px;
-  justify-content: center;
-
-  .icon {
-    /* Icon for setups */
-    text-align: center;
-    width: 150px;
-    height: 100%;
-
-    p2 {
-      display: block;
-      margin-top: 0px;
-    }
-
-    img {
-      width: 70px;
-    }
-
-    @media screen and (max-width: 900px) {
-      width: 120px;
-    }
-  }
-}
-
-.icon_text {
-  /* Puts icons in row evenly spaced */
-  display: flex;
-  width: 100%;
-  margin-bottom: 10px;
-  justify-content: space-between;
-
-  img {
-    height: 30px;
-  }
-}
-
+/* formatting for space and indvidual spaces pages */
 .space_page {
   h2 {
     text-align: center;
     margin: 0;
-
-    @media screen and (max-width: 900px) {
-      font-size: 160%;
-    }
   }
-  
+
   .par_spacer {
     margin-bottom: 10px;
   }
 }
 
+@media screen and (max-width: 900px) {
+  .space_page {
+    h2 {
+      font-size: 160%;
+    }
+  }
+}
+
+/* procedures on home page */
 .procedures {
-  /* procedures on home page */
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 50px;
 
-  @media screen and (max-width: 900px) {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-  
   .procedures_box {
     height: 440px;
-    background: linear-gradient(white 0%, white 35%,var(--color-green) 35%, var(--color-green) 100%);
-    box-shadow: 2px 5px 5px #A9A9A9;
+    background: linear-gradient(
+      white 0%,
+      white 35%,
+      var(--color-green) 35%,
+      var(--color-green) 100%
+    );
+    box-shadow: 2px 5px 5px #a9a9a9;
     border-radius: 10px;
-    
-    @media screen and (max-width: 900px) {
-      height: 380px;
-    }
-    
+
     img {
       display: block;
       max-height: 29%;
@@ -624,7 +358,312 @@ section[data-section-id="67043acdbd328808348faf9a"] {
   }
 
   .procedures_box:hover {
-   	background: linear-gradient(#f9fafa 0%, #f9fafa 35%, var(--color-green-hover) 35%, var(--color-green-hover) 100%);
-    box-shadow: 5px 8px 5px #A9A9A9;
+    background: linear-gradient(
+      #f9fafa 0%,
+      #f9fafa 35%,
+      var(--color-green-hover) 35%,
+      var(--color-green-hover) 100%
+    );
+    box-shadow: 5px 8px 5px #a9a9a9;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .procedures {
+    grid-template-columns: 1fr;
+    gap: 25px;
+
+    .procedures_box {
+      height: 380px;
+    }
+  }
+}
+
+/* box with dashed edges- used in Spaces page */
+.space_desc_box {
+  border: 2px solid #a9a9a9;
+  box-shadow: 2px 5px 5px #a9a9a9;
+  padding: 1% 3% 2% 3%;
+  height: 400px;
+  background: white;
+
+  h3 {
+    margin: 0.2em auto 0.3em auto;
+    color: var(--color-blue);
+    text-align: center;
+    font-size: 170%;
+    margin-bottom: 15px;
+  }
+
+  button {
+    font-size: 120%;
+    margin-left: 25%;
+    color: white;
+    background-color: var(--color-blue);
+    padding: 2% 8% 2% 8%;
+    position: absolute;
+    top: 78%;
+    border: none;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  button:hover {
+    background-color: var(--color-blue-hover);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .space_desc_box {
+    h3 {
+      font-size: 130%;
+      margin-bottom: 10px;
+    }
+
+    button {
+      margin-left: 12%;
+      top: 82%;
+    }
+  }
+
+  .par {
+    margin-top: -20px;
+  }
+}
+
+/* Puts setups in row evenly spaced */
+.setup_icon {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: center;
+
+  .icon {
+    text-align: center;
+    width: 150px;
+    height: 100%;
+
+    p2 {
+      display: block;
+      margin-top: 0px;
+    }
+
+    img {
+      width: 70px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .setup_icon {
+    .icon {
+      width: 120px;
+    }
+  }
+}
+
+.icon_text {
+  /* Puts icons in row evenly spaced */
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  justify-content: space-between;
+
+  img {
+    height: 30px;
+  }
+}
+
+/* Puts icons in row evenly spaced */
+.icon_row {
+  width: 90%;
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 900px) {
+  .icon_row {
+    margin-bottom: 10px;
+    font-size: 85%;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .price {
+    width: 140px;
+  }
+}
+
+.icon_row > * {
+  height: 90%;
+}
+
+.row_wrapper {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* List of icons next to text */
+.icon_text_list {
+  min-width: 200px;
+
+  .item {
+    margin-top: -10px;
+
+    img {
+      height: 20px !important;
+      float: left;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .icon_text_list {
+    img {
+      margin-right: -50px;
+    }
+
+    p {
+      margin-left: -40px;
+    }
+  }
+}
+
+/* List of icons next to text for amenities */
+.amenities_text_list {
+  min-width: 200px;
+
+  .item {
+    margin-top: -10px;
+
+    img {
+      height: 20px !important;
+      float: left;
+      margin-right: 10px;
+    }
+  }
+}
+
+/* Puts two divs next to each other */
+.two_columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  .column {
+    h4 {
+      margin-top: 0;
+      margin-bottom: -5px;
+    }
+
+    .column_title {
+      font-size: 150%;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .two_columns {
+    margin-bottom: 10px;
+
+    .column {
+      margin-bottom: 5px;
+
+      .column_title {
+        margin-bottom: 10px;
+        font-size: 130%;
+      }
+    }
+  }
+}
+
+/* Puts two divs next to each other for amenities */
+.amenities_columns {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  column-gap: 30px;
+  justify-content: center;
+
+  .column {
+    h4 {
+      margin-top: 0;
+    }
+
+    .column_title {
+      font-size: 150%;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .amenities_columns {
+    margin-bottom: 15px;
+    grid-template-columns: repeat(auto-fit, 80vw);
+
+    .column {
+      .column_title {
+        font-size: 130%;
+        margin-bottom: 0px;
+      }
+
+      .mobile {
+        font-size: 120%;
+        margin-top: 10px;
+        margin-bottom: -5px;
+        justify-text: center;
+      }
+    }
+  }
+}
+
+#amenities_col {
+  /* columns inside amenities columns */
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  column-gap: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  #amenities_col {
+    padding-left: 20px;
+    grid-template-columns: repeat(auto-fit, 80vw);
+  }
+}
+
+/* Icon for guests, sqft, etc */
+.space_icon {
+  text-align: center;
+
+  p2 {
+    display: block;
+    padding-top: 2%;
+  }
+
+  img {
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .space_icon {
+    max-width: 110px;
+
+    img {
+      height: 35px;
+    }
+
+    p2 {
+      line-height: 20px;
+      padding-top: 5px;
+    }
   }
 }
