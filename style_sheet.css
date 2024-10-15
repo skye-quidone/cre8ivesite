@@ -109,6 +109,20 @@ html {
   }
 }
 
+/* skedda screen page */
+#collection-670932d704264858df36706e {
+  overflow: hidden;
+  background: var(--color-yellow);
+}
+
+#zoom-skedda {
+  width: 150%;
+  height: 850px;
+  border: none;
+  transform: scale(0.668);
+  transform-origin: 0 0;
+}
+
 /* --------------------- w javascript --------------------- */
 
 /* scroll back to the map on spaces page */
