@@ -1,3 +1,12 @@
+<!-- header injection -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://kit.fontawesome.com/dd04f97c73.js" crossorigin="anonymous"></script>
+
+
+
+<!-- footer injection -->
+
 <!-- scroll to top -->
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script>
