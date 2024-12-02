@@ -551,15 +551,28 @@ html {
 /* List of icons next to text for amenities */
 .amenities_text_list {
   min-width: 200px;
+  margin-top: -15px;
 
   .item {
-    margin-top: -10px;
+    position: relative;
+    margin-bottom: 4px;
+    
+    p {
+      display: inline;
+      margin-left: 30px;
+    }
 
     img {
+      position: absolute;
       height: 20px !important;
-      float: left;
-      margin-right: 10px;
+      top: 5px;
     }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .amenities_text_list {
+    margin-top: 10px;
   }
 }
 
@@ -680,4 +693,31 @@ html {
       padding-top: 5px;
     }
   }
+}
+
+
+/* Tooltip */
+.tooltip {
+  display: inline-block;
+  border-bottom: 1px dotted black;
+
+  .tooltiptext {
+    visibility: hidden;
+    min-width: 100px;
+    height: auto;
+    background: white;
+    border: 1px solid #a9a9a9;
+    box-shadow: 2px 5px 5px #a9a9a9;
+    text-align: center;
+    padding: 5px;
+   
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    margin-left: 5px;
+  }
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
