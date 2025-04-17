@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
     slotMinTime: "08:00:00",
     slotMaxTime: "22:00:00",
 
-    height: 900,
+    height: 700,
 
     resources: resources_list,
 
