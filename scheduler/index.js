@@ -17,7 +17,6 @@ let events_list = [
   {
     googleCalendarId:
       "32a86d4755571b696dd7ddd6156d76c987af26d00fc2fb406133f8895c1f1c08@group.calendar.google.com",
-		color: 'red',
     eventDataTransform: function (event) {
       event.resourceId = "1-1"
       return event
@@ -34,7 +33,6 @@ let events_list = [
   {
     googleCalendarId:
       "876106358800b8bdfde0ae772a19c639c171466f48af17cf1cb10760ecccbbfd@group.calendar.google.com",
-			color: 'pink',
     eventDataTransform: function (event) {
       event.resourceId = "2-1"
       return event
@@ -43,7 +41,6 @@ let events_list = [
   {
     googleCalendarId:
       "39370b4d5ccdfe1a6cbe1e31c6b0fcaaf56f67f157400289ee655807e142062b@group.calendar.google.com",
-			color: 'green',
     eventDataTransform: function (event) {
       event.resourceId = "2-2"
       return event
@@ -128,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
     slotMinTime: "08:00:00",
     slotMaxTime: "22:00:00",
 
-    // height: '50%',
+    height: 900,
 
     resources: resources_list,
 
