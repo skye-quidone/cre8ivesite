@@ -12,15 +12,25 @@ body {
     Helvetica,
     sans-serif;
   font-size: 14px;
+	height: 100%;
 }
 
 #holding_box {
-  height: 100vw;
 }
 
 #calendar {
-  max-width: 95vw;
-  margin: 40px auto;
+  max-width: 100vw;
+  height: 100%;
+	background: white;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
-
+.top_img {
+	display: block;
+	height: 10vw;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
