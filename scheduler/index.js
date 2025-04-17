@@ -121,12 +121,12 @@ document.addEventListener("DOMContentLoaded", function () {
     allDaySlot: false,
     displayEventTime: false,
     initialView: "resourceTimeGridDay",
+		contentHeight: 'auto',
 
     slotMinTime: "08:00:00",
     slotMaxTime: "22:00:00",
 
-    height: 600,
-		contentHeight: 'auto',
+		editable: true,
 
     resources: resources_list,
 
@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
     eventClick: function (event) {
       event.jsEvent.preventDefault()
       var new_title = prompt("Event Title:", event.title, {
-        buttons: { Ok: true, Cancel: false },
+        buttons: { Ok: true, Cancel: false},
       })
       event.event.setProp("title", new_title)
     },
